@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+
+div{
+    position: absolute;
+    background-color: yellow;
+    animation: move 3s infinite linear;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+
+}
+
+@keyframes move{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#bloco_1{
+    width: 300px;
+    height: 300px;
+}
