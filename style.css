@@ -105,6 +105,23 @@
     animation: botao 2s ease-in-out forwards;
 }
 
+/*serve pra tirar  botão da tela e trazer uma página no lugar*/
+@keyframes pagina{
+    0%{
+        background-color: rgb(15, 173, 208);
+        height: 150px;
+        width: 350px;
+        font-size: 60px;
+    }
+    100%{
+        background-color: rgb(255, 255, 255);
+        height: 100px;
+        width: 100px;
+        font-size: 0px;
+    }
+}
+
+/*Essa animação só serve para fazer o botão aparecer na tela*/
 @keyframes botao{
     0%{
         background-color: rgba(15, 173, 208, 0);

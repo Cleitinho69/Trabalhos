@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         botão.style.transition= '0.4s ease-in-out';
     }
+
+    // botão.addEventListener('click', ()=>{
+    //   botão.style.animation="pagina 0.5s ease-in-out forwards";
+    //   botão..remove('hover');
+    // });
+
+    const style = document.styleSheets
   });
 
 console.log('bloco');
