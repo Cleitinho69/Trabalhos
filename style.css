@@ -1,6 +1,12 @@
-*{
-    padding: 0;
-    margin: 0;
+
+#center{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
 }
 
 #bloco_1{
@@ -8,6 +14,7 @@
     background-color: rgb(237, 241, 16);
     bottom: 0;
     width: 300px;
+    z-index: 1;
 }
 
 @keyframes bloco1{
@@ -26,6 +33,7 @@
     width: 530px;
     margin-left: 300px;
     bottom: 0;
+    z-index: 2;
 }
 
 @keyframes bloco2{
@@ -44,6 +52,7 @@
     top: 0;
     right: 0;
     width: 500px;
+    z-index: 3;
 }
 
 
@@ -53,6 +62,7 @@
     width: 700px;
     margin-left: 300px;
     top: 0;
+    z-index: 4;
     /*animation: bottom 2s ease-in-out forwards;*/
 }
 
@@ -70,6 +80,7 @@
     background-color: rgb(250, 255, 0);
     top: 0;
     height: 300px;
+    z-index: 5;
     /*animation: side 2s ease-in-out forwards;*/
 }
 
@@ -79,6 +90,7 @@
     top: 25%;
     right: 0;
     height: 300px;
+    z-index: 5;
 }
 
 @keyframes side{
@@ -91,22 +103,23 @@
 }
 
 #botão{
-    position: absolute;
     font-size: 60px;
     color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     height: 150px;
     width: 350px;
     border: 0;
     border-radius: 10%;
     background-color: rgb(15, 173, 208);
     animation: botao 2s ease-in-out forwards;
+    z-index: 7;
 }
 
-/*serve pra tirar  botão da tela e trazer uma página no lugar*/
-@keyframes pagina{
+#botão:hover{
+    border-radius: 40% 0 40% 0;
+}
+
+/*serve pra tirar  botão da tela*/
+@keyframes AniPagina{
     0%{
         background-color: rgb(15, 173, 208);
         height: 150px;
@@ -118,6 +131,7 @@
         height: 100px;
         width: 100px;
         font-size: 0px;
+
     }
 }
 
@@ -131,6 +145,14 @@
     }
 }
 
-#botão:hover{
-    border-radius: 40% 0 40% 0;
+#pagina{
+    display: none;
+    
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 10%;
+    transform: rotate(0);
+    transition: transform 1s ease-in-out;
+    z-index: 7;
 }
