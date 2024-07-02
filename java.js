@@ -19,32 +19,25 @@ bloco4.style.animation = "bloco4 2s ease-in-out forwards";
 bloco5.style.animation = "side 2s ease-in-out 1s forwards";
 bloco6.style.animation = "side 2s ease-in-out 1s forwards";
 
-botão.style.transition = "0.4s ease-in-out";
+botão.style.transition = "2s ease-in-out";
 
-botão.addEventListener("click", () => {
-  botão.style.animation = "AniPagina 1s ease-in-out forwards";
+// botão.addEventListener("click", () => {
+//   botão.style.animation = "AniPagina 1s ease-in-out forwards";
 
-  setTimeout(() => {
-    botão.style.display = "none";
-  }, 1000);
+//   setTimeout(() => {
+//     botão.style.display = "none";
+//   }, 1000);
 
-  setTimeout(() => {
-    pagina.style.display = "block";
-  }, 1000);
+//   setTimeout(() => {
+//     pagina.style.display = "block";
+//   }, 1000);
 
-  setTimeout(() => {
-    pagina.style.transform = "rotate(360deg)";
-  }, 1100);
+//   setTimeout(() => {
+//     pagina.style.transform = "rotate(360deg)";
+//   }, 1100);
 
-  setTimeout(() => {
-    pagina.style.width = "1200px";
-    pagina.style.height = "2000px";
-    pagina.style.margin = "110% 0 0 0";
-    pagina.style.transition = "1s ease-in-out";
-  }, 2500);
-});
+// });
 
 setTimeout(()=>{
-  h1.innerHTML=("Bem Vindo");
   pagina.classList.add("show");
 },5000);
