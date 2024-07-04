@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <div id="center">
-        <div id="pagina">
-            <center>
-                <h1 id="texto"></h1>
-            </center>
-        </div>
-        <button id="botão">Próximo</button>
+  <body>
+    <!-- Apenas a área do botão -->
+    <div id="botao_contato" onmouseenter="botao_enter()" onmouseout="botao_out()"></div>
+
+    <button id="botao">
+      Próximo
+    </button>
+
+    <div id="chaves">
+      <p id="esquerda"><</p>
+      <p id="direita">></p>
     </div>
+
+    <!-- Blocos do fundo -->
     <div id="bloco_1"></div>
     <div id="bloco_2"></div>
     <div id="bloco_3"></div>
     <div id="bloco_4"></div>
     <div id="bloco_5"></div>
     <div id="bloco_6"></div>
-    <script src="java.js"></script>
-</body>
 
+    <script src="java.js"></script>
+  </body>
 </html>
