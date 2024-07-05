@@ -104,15 +104,15 @@
 }
 
 /* Aqui é coisas do botão */
-#botao_contato{
-    position: absolute;
-    top: 300px;
-    left: 0;
-    margin-left: 150px;
-    height: 100px;
-    width: 350px;
-    background-color: transparent;
-    z-index: 8;
+#botao_contato {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  margin-left: 150px;
+  height: 100px;
+  width: 350px;
+  background-color: transparent;
+  z-index: 8;
 }
 
 #botao {
@@ -151,16 +151,16 @@
   font-family: Arial;
   z-index: 7;
 }
-#direita {  
-    color: transparent;
+#direita {
+  color: transparent;
   margin-left: 0;
 }
 #esquerda {
-    color: transparent;
+  color: transparent;
   margin-right: 0;
 }
 /* Css das minhas informações */
-.dev{
+.dev {
   position: absolute;
   display: flex;
   align-items: center;
@@ -174,67 +174,67 @@
   z-index: 8;
 }
 
-.dev h1{
+.dev h1 {
   margin-top: 10px;
   font-size: 70px;
   animation: titulo 1.5s ease-in-out both;
   transform: translateX(200px);
-  font-family: 'japonesa';
+  font-family: "japonesa";
 }
 @keyframes titulo {
-  0%{
-      color: transparent;
-      transform: translateX(200px);
+  0% {
+    color: transparent;
+    transform: translateX(200px);
   }
-  100%{
-      color: #021fc0;
-      transform: translateX(0);
+  100% {
+    color: #021fc0;
+    transform: translateX(0);
   }
 }
 
-.dev #foto{
+.dev #foto {
   margin-top: 40px;
   width: 300px;
   height: 300px;
   border-radius: 100%;
   visibility: hidden;
 }
-@keyframes dev_foto{
-  0%{
-      background-color: transparent;
-      transform: translateY(-200px);
+@keyframes dev_foto {
+  0% {
+    background-color: transparent;
+    transform: translateY(-200px);
   }
-  100%{
-      visibility: inherit;
-      background-color: black;
-      transform: translateY(0);
+  100% {
+    visibility: inherit;
+    background-color: black;
+    transform: translateY(0);
   }
 }
 
-.dev #nome{
+.dev #nome {
   margin-bottom: 100px;
   visibility: hidden;
 }
-@keyframes dev_nome{
-  0%{
-      color: transparent;
-      transform: translateY(-100px);
+@keyframes dev_nome {
+  0% {
+    color: transparent;
+    transform: translateY(-100px);
   }
-  100%{
-      visibility: inherit;
-      color: black;
-      transform: translateY(0);
+  100% {
+    visibility: inherit;
+    color: black;
+    transform: translateY(0);
   }
 }
 
-.dev .contatos{
+.dev .contatos {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 35%;
 }
 
-.dev .contatos #github{
+.dev .contatos #github {
   background-image: url(imagens/github-mark/github-mark-white.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -242,13 +242,13 @@
   width: 40px;
   height: 40px;
 }
-.dev .contatos #github:hover{
+.dev .contatos #github:hover {
   background-image: url(imagens/github-mark/github-mark.png);
   background-color: purple;
   border-radius: 100%;
 }
 
-.dev .contatos #email{
+.dev .contatos #email {
   background-image: url(imagens/gmail.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -256,11 +256,11 @@
   width: 40px;
   height: 40px;
 }
-.dev .contatos #email:hover{
-  background-image: url(imagens/gmail\ \(1\).png);
+.dev .contatos #email:hover {
+  background-image: url(imagens/gmail2.png);
 }
 
-.dev .contatos #linkedin{
+.dev .contatos #linkedin {
   background-image: url(imagens/LinkedIn-Logos/In/Digital/White/1x/In-White-40.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -268,18 +268,18 @@
   width: 40px;
   height: 40px;
 }
-.dev .contatos #linkedin:hover{
+.dev .contatos #linkedin:hover {
   background-image: url(imagens/LinkedIn-Logos/In/Digital/Blue/1x/In-Blue-40.png);
 }
 
 @keyframes dev_contatos {
-  0%{
-      color: transparent;
-      transform: translateX(400px);
+  0% {
+    color: transparent;
+    transform: translateX(400px);
   }
-  100%{
-      visibility: inherit;
-      color: black;
-      transform: translateX(0px);
+  100% {
+    visibility: inherit;
+    color: black;
+    transform: translateX(0px);
   }
 }
