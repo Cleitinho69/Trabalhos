@@ -9,18 +9,14 @@
 
   <body>
     <!-- Apenas a área do botão -->
-    <div
-      id="botao_contato"
-      onmouseenter="botao_enter()"
-      onmouseout="botao_out()"
-    ></div>
 
-    <button id="botao">Próximo</button>
-
-    <div id="chaves">
-      <p id="esquerda"><</p>
-      <p id="direita">></p>
-    </div>
+    <button class="botao" onmouseenter="mouse_enter()" onmouseleave="mouse_leave()">
+      <div class="chaves">
+        <p id="direita">></p>
+        <p id="esquerda"><</p>
+      </div>
+      <p>Próximo</p>
+    </button>
 
     <!-- Blocos do fundo -->
     <div id="bloco_1"></div>

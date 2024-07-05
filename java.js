@@ -6,9 +6,6 @@ function pagina() {
   var bloco4 = document.getElementById("bloco_4");
   var bloco5 = document.getElementById("bloco_5");
   var bloco6 = document.getElementById("bloco_6");
-  var botao = document.getElementById("botao");
-  var pagina = document.getElementById("pagina");
-  var h1 = document.getElementById("texto");
 
   /*Nessas duas eu coloquei a mesma animação, já que não muda muita coisa*/
   bloco1.style.animation = "bloco1 2s ease-in-out forwards";
@@ -22,48 +19,47 @@ function pagina() {
   bloco6.style.animation = "side 2s ease-in-out 1s forwards";
 }
 // Animação do botão no momento em que você clica
-function botao_enter() {
-  var chaves = document.querySelectorAll("#chaves, #direita, #esquerda");
+function mouse_enter() {
+  var botao = document.querySelector(".botao");
+  var chaves = document.querySelectorAll(
+    ".botao .chaves #esquerda, .botao .chaves #direita"
+  );
+  
+  chaves[0].style.transition = "0.5s ease-in-out";
+  chaves[1].style.transition = "0.5s ease-in-out";
 
-  chaves[0].style.display = "flex";
+  chaves[0].style.transform = "TranslateX(160px)";
+  chaves[1].style.transform = "TranslateX(-160px)";
 
-  setTimeout(() => {
-    chaves[0].style.transition = "0.5s ease-in-out";
-    chaves[1].style.transition = "0.5s ease-in-out";
-    chaves[2].style.transition = "0.5s ease-in-out";
+  chaves[0].style.color = "white";
+  chaves[1].style.color = "white";
 
-    chaves[2].style.marginLeft = "115px";
-    chaves[1].style.marginRight = "115px";
-    chaves[0].style.marginLeft = "120px";
-
-    chaves[1].style.color = "white";
-    chaves[2].style.color = "white";
-
-    botao.style.transition = "0.5s ease-in-out";
-    botao.style.backgroundColor = "#0800ff";
-    botao.style.color = "white";
-  }, 1);
+  botao.style.transition = "0.5s ease-in-out";
+  botao.style.backgroundColor = "#0800ff";
+  botao.style.color = "white";
 }
 
-function botao_out() {
-  var chaves = document.querySelectorAll("#chaves, #direita, #esquerda");
-
-  chaves[0].style.transition = "0.2s ease-in-out";
-  chaves[1].style.transition = "0.2s ease-in-out";
-  chaves[2].style.transition = "0.2s ease-in-out";
-
-  chaves[2].style.marginLeft = "0px";
-  chaves[1].style.marginRight = "0px";
-  chaves[0].style.marginLeft = "250px";
-
-  botao.style.backgroundColor = "transparent";
-  botao.style.color = "RGBA(0, 195, 255, 0.308)";
-  chaves[1].style.color = "transparent";
-  chaves[2].style.color = "transparent";
+function mouse_leave() {
+  var botao = document.querySelector(".botao");
+  var chaves = document.querySelectorAll(
+    ".botao .chaves #esquerda, .botao .chaves #direita"
+  );
 
   setTimeout(() => {
-    chaves[0].style.display = "none";
-  }, 200);
+    chaves[0].style.transition = "0.2s ease-in-out";
+    chaves[1].style.transition = "0.2s ease-in-out";
+
+    chaves[0].style.color = "transparent";
+    chaves[1].style.color = "transparent";
+
+    botao.style.color = "RGBA(0, 195, 255, 0.308)";
+    botao.style.backgroundColor = "rgba(0, 0, 0, 0.103)";
+
+    setTimeout(() => {
+      chaves[0].style.transform = "TranslateX(0)";
+      chaves[1].style.transform = "TranslateX(0)";
+    }, 1);
+  }, 100);
 }
 
 // Serve para o meu perfil
