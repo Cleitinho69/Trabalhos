@@ -2,11 +2,16 @@
   margin: 0;
   padding: 0;
   border: 0;
+  text-decoration: none;
+}
+@font-face {
+  font-family: japonesa;
+  src: url(fontes/go3v2.ttf);
 }
 
 #bloco_1 {
   position: absolute;
-  background-color: rgb(237, 241, 16);
+  background-color: rgb(31, 2, 75);
   bottom: 0;
   width: 300px;
   z-index: 1;
@@ -24,7 +29,7 @@
 
 #bloco_2 {
   position: absolute;
-  background-color: rgb(216, 220, 37);
+  background-color: rgb(22, 2, 51);
   width: 535px;
   margin-left: 300px;
   bottom: 0;
@@ -43,7 +48,7 @@
 
 #bloco_3 {
   position: absolute;
-  background-color: rgb(221, 225, 14);
+  background-color: rgb(32, 4, 75);
   top: 0;
   right: 0;
   width: 525px;
@@ -52,7 +57,7 @@
 
 #bloco_4 {
   position: absolute;
-  background-color: rgb(233, 237, 36);
+  background-color: rgb(28, 1, 68);
   width: 700px;
   margin-left: 300px;
   top: 0;
@@ -72,7 +77,7 @@
 
 #bloco_5 {
   position: absolute;
-  background-color: rgb(250, 255, 0);
+  background-color: rgb(34, 0, 85);
   top: 0;
   height: 300px;
   z-index: 5;
@@ -81,7 +86,7 @@
 
 #bloco_6 {
   position: absolute;
-  background-color: rgb(250, 255, 0);
+  background-color: rgb(34, 0, 85);
   top: 25%;
   right: 0;
   height: 300px;
@@ -115,7 +120,7 @@
   right: 45%;
   top: 300px;
   font-size: 60px;
-  color: rgba(0, 0, 0, 0.308);
+  color: rgba(0, 195, 255, 0.308);
   height: 100px;
   width: 350px;
   border-radius: 20px;
@@ -153,4 +158,128 @@
 #esquerda {
     color: transparent;
   margin-right: 0;
+}
+/* Css das minhas informações */
+.dev{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: transparent;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 8;
+}
+
+.dev h1{
+  margin-top: 10px;
+  font-size: 70px;
+  animation: titulo 1.5s ease-in-out both;
+  transform: translateX(200px);
+  font-family: 'japonesa';
+}
+@keyframes titulo {
+  0%{
+      color: transparent;
+      transform: translateX(200px);
+  }
+  100%{
+      color: #021fc0;
+      transform: translateX(0);
+  }
+}
+
+.dev #foto{
+  margin-top: 40px;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  visibility: hidden;
+}
+@keyframes dev_foto{
+  0%{
+      background-color: transparent;
+      transform: translateY(-200px);
+  }
+  100%{
+      visibility: inherit;
+      background-color: black;
+      transform: translateY(0);
+  }
+}
+
+.dev #nome{
+  margin-bottom: 100px;
+  visibility: hidden;
+}
+@keyframes dev_nome{
+  0%{
+      color: transparent;
+      transform: translateY(-100px);
+  }
+  100%{
+      visibility: inherit;
+      color: black;
+      transform: translateY(0);
+  }
+}
+
+.dev .contatos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.dev .contatos #github{
+  background-image: url(imagens/github-mark/github-mark-white.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  visibility: hidden;
+  width: 40px;
+  height: 40px;
+}
+.dev .contatos #github:hover{
+  background-image: url(imagens/github-mark/github-mark.png);
+  background-color: purple;
+  border-radius: 100%;
+}
+
+.dev .contatos #email{
+  background-image: url(imagens/gmail.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  visibility: hidden;
+  width: 40px;
+  height: 40px;
+}
+.dev .contatos #email:hover{
+  background-image: url(imagens/gmail\ \(1\).png);
+}
+
+.dev .contatos #linkedin{
+  background-image: url(imagens/LinkedIn-Logos/In/Digital/White/1x/In-White-40.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  visibility: hidden;
+  width: 40px;
+  height: 40px;
+}
+.dev .contatos #linkedin:hover{
+  background-image: url(imagens/LinkedIn-Logos/In/Digital/Blue/1x/In-Blue-40.png);
+}
+
+@keyframes dev_contatos {
+  0%{
+      color: transparent;
+      transform: translateX(400px);
+  }
+  100%{
+      visibility: inherit;
+      color: black;
+      transform: translateX(0px);
+  }
 }
