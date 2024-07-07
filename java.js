@@ -24,7 +24,7 @@ function mouse_enter() {
   var chaves = document.querySelectorAll(
     ".botao .chaves #esquerda, .botao .chaves #direita"
   );
-  
+
   chaves[0].style.transition = "0.5s ease-in-out";
   chaves[1].style.transition = "0.5s ease-in-out";
 
@@ -44,24 +44,18 @@ function mouse_leave() {
   var chaves = document.querySelectorAll(
     ".botao .chaves #esquerda, .botao .chaves #direita"
   );
+  chaves[0].style.transition = "0.2s ease-in-out";
+  chaves[1].style.transition = "0.2s ease-in-out";
 
-  setTimeout(() => {
-    chaves[0].style.transition = "0.2s ease-in-out";
-    chaves[1].style.transition = "0.2s ease-in-out";
+  chaves[0].style.color = "transparent";
+  chaves[1].style.color = "transparent";
 
-    chaves[0].style.color = "transparent";
-    chaves[1].style.color = "transparent";
+  botao.style.color = "RGBA(0, 195, 255, 0.308)";
+  botao.style.backgroundColor = "rgba(0, 0, 0, 0.103)";
 
-    botao.style.color = "RGBA(0, 195, 255, 0.308)";
-    botao.style.backgroundColor = "rgba(0, 0, 0, 0.103)";
-
-    setTimeout(() => {
-      chaves[0].style.transform = "TranslateX(0)";
-      chaves[1].style.transform = "TranslateX(0)";
-    }, 1);
-  }, 100);
+  chaves[0].style.transform = "TranslateX(0)";
+  chaves[1].style.transform = "TranslateX(0)";
 }
-
 // Serve para o meu perfil
 function perfil() {
   var titulo = document.querySelector(".dev h1");
@@ -70,7 +64,9 @@ function perfil() {
   var link = document.querySelectorAll(
     ".dev .contatos #github, .dev .contatos #email, .dev .contatos #linkedin"
   );
-
+  titulo.style.visibility = "inherit";
+  titulo.style.color = "#021fc0";
+  titulo.style.transform = "translateX(0)";
   setTimeout(() => {
     foto.style.animation = "dev_foto 1s ease-in-out both";
 

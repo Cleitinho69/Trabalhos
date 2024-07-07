@@ -172,18 +172,20 @@
 }
 
 .dev h1 {
+  visibility: inherit;
   margin-top: 10px;
   font-size: 70px;
   animation: titulo 1.5s ease-in-out both;
-  transform: translateX(200px);
   font-family: "japonesa";
 }
 @keyframes titulo {
   0% {
+    visibility: hidden;
     color: transparent;
-    transform: translateX(200px);
+    transform: translateX(-400px);
   }
   100% {
+    visibility: inherit;
     color: #021fc0;
     transform: translateX(0);
   }
@@ -234,7 +236,7 @@
 .dev .contatos #github {
   background-image: url(imagens/github-mark/github-mark-white.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   visibility: hidden;
   width: 40px;
   height: 40px;
@@ -248,7 +250,7 @@
 .dev .contatos #email {
   background-image: url(imagens/gmail.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   visibility: hidden;
   width: 40px;
   height: 40px;
@@ -260,7 +262,7 @@
 .dev .contatos #linkedin {
   background-image: url(imagens/LinkedIn-Logos/In/Digital/White/1x/In-White-40.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   visibility: hidden;
   width: 40px;
   height: 40px;
@@ -272,7 +274,7 @@
 @keyframes dev_contatos {
   0% {
     color: transparent;
-    transform: translateX(400px);
+    transform: translateX(250px);
   }
   100% {
     visibility: inherit;
