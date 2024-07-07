@@ -107,9 +107,6 @@
 
 .botao {
   position: absolute;
-  top: 300px;
-  left: 0;
-  margin-left: 50px;
   height: 100px;
   width: 350px;
   background-color: rgba(0, 0, 0, 0.103);
@@ -117,13 +114,38 @@
   border-radius: 20px;
   font-size: 60px;
   font-weight: bold;
-  animation: botao 1s ease-in-out both;
   z-index: 7;
 }
+/* posicionamento de cada botão */
+.botao#home {
+  top: 300px;
+  left: 50px;
+  animation: botao 1s ease-in-out both;
+}
 
-.botao p{
+.botao#skill {
+  display: none;
+  visibility: hidden;
+  color: transparent;
+  transform: translateY(-100px);
+  top: 275px;
+  left: 950px;
+}
+
+.botao#projeto {
+  display: none;
+  visibility: hidden;
+  color: transparent;
+  transform: translateY(-170px);
+  top: 400px;
+  left: 950px;
+}
+/* apenas para ter certeza que oq esta escrito no p não vai interferir na animação do botão */
+.botao p {
   z-index: -1;
 }
+
+/* estilos das chaves */
 .botao .chaves {
   position: absolute;
   left: 50%;
@@ -143,7 +165,7 @@
   color: transparent;
 }
 
-/*Essa animação só serve para fazer o botão aparecer na tela*/
+/*Essa animação só serve para fazer o botão proximo aparecer na tela*/
 @keyframes botao {
   0% {
     transform: translateX(390px);

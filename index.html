@@ -8,14 +8,49 @@
   </head>
 
   <body>
-    <!-- Apenas a área do botão -->
+    <!-- Apenas a área dos botões -->
 
-    <button class="botao" onmouseenter="mouse_enter()" onmouseleave="mouse_leave()">
+    <!-- botão home -->
+    <button
+      class="botao"
+      id="home"
+      onmouseenter="mouse_enter(id)"
+      onmouseleave="mouse_leave(id)"
+      onclick="botao_click(id)"
+    >
       <div class="chaves">
         <p id="direita">></p>
         <p id="esquerda"><</p>
       </div>
-      <p>Próximo</p>
+      <p id="texto">Próximo</p>
+    </button>
+    <!-- botao skill -->
+    <button
+      class="botao"
+      id="skill"
+      onmouseenter="mouse_enter(id)"
+      onmouseleave="mouse_leave(id)"
+      onclick="botao_click(id)"
+    >
+      <div class="chaves">
+        <p id="direita">></p>
+        <p id="esquerda"><</p>
+      </div>
+      <p id="texto">Skills</p>
+    </button>
+    <!-- botao projeto -->
+    <button
+      class="botao"
+      id="projeto"
+      onmouseenter="mouse_enter(id)"
+      onmouseleave="mouse_leave(id)"
+      onclick="botao_click(id)"
+    >
+      <div class="chaves">
+        <p id="direita">></p>
+        <p id="esquerda"><</p>
+      </div>
+      <p id="texto">Projetos</p>
     </button>
 
     <!-- Blocos do fundo -->
