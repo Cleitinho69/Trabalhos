@@ -181,7 +181,6 @@
 /* Css das minhas informações */
 .dev {
   position: absolute;
-  display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
@@ -194,7 +193,6 @@
 }
 
 .dev h1 {
-  visibility: inherit;
   margin-top: 10px;
   font-size: 70px;
   animation: titulo 1.5s ease-in-out both;
