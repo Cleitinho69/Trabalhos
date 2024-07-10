@@ -8,6 +8,10 @@
   font-family: japonesa;
   src: url(fontes/go3v2.ttf);
 }
+@font-face {
+  font-family: skill;
+  src: url(fontes/Lemon\ Shake\ Shake.ttf);
+}
 
 #bloco_1 {
   position: absolute;
@@ -177,22 +181,22 @@
   }
 }
 
-
 /* Css das minhas informações */
-.dev {
+.perfil {
   position: absolute;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   background-color: transparent;
+  width: 680px;
+  height: 650px;
   right: 0;
   top: 0;
-  width: 50%;
-  height: 100%;
+  transition: 1s ease-in-out;
   z-index: 8;
 }
 
-.dev h1 {
+.perfil h1 {
   margin-top: 10px;
   font-size: 70px;
   animation: titulo 1.5s ease-in-out both;
@@ -211,14 +215,14 @@
   }
 }
 
-.dev #foto {
-  margin-top: 40px;
+.perfil #foto {
+  margin-top: 10px;
   width: 300px;
   height: 300px;
   border-radius: 100%;
   visibility: hidden;
 }
-@keyframes dev_foto {
+@keyframes perfil_foto {
   0% {
     background-color: transparent;
     transform: translateY(-200px);
@@ -230,11 +234,10 @@
   }
 }
 
-.dev #nome {
-  margin-bottom: 100px;
+.perfil #nome {
   visibility: hidden;
 }
-@keyframes dev_nome {
+@keyframes perfil_nome {
   0% {
     color: transparent;
     transform: translateY(-100px);
@@ -246,52 +249,54 @@
   }
 }
 
-.dev .contatos {
+.perfil .contatos {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
   justify-content: space-around;
-  width: 35%;
+  width: 200px;
+  height: 90px;
 }
 
-.dev .contatos #github {
-  background-image: url(imagens/github-mark/github-mark-white.png);
+.perfil .contatos #github {
+  background-image: url(imagens/logos/github-mark/github-mark-white.png);
   background-repeat: no-repeat;
   background-size: contain;
   visibility: hidden;
   width: 40px;
   height: 40px;
 }
-.dev .contatos #github:hover {
-  background-image: url(imagens/github-mark/github-mark.png);
+.perfil .contatos #github:hover {
+  background-image: url(imagens/logos/github-mark/github-mark.png);
   background-color: purple;
   border-radius: 100%;
 }
 
-.dev .contatos #email {
-  background-image: url(imagens/gmail.png);
+.perfil .contatos #email {
+  background-image: url(imagens/logos/gmail/gmail.png);
   background-repeat: no-repeat;
   background-size: contain;
   visibility: hidden;
   width: 40px;
   height: 40px;
 }
-.dev .contatos #email:hover {
-  background-image: url(imagens/gmail2.png);
+.perfil .contatos #email:hover {
+  background-image: url(imagens/logos/gmail/gmail2.png);
 }
 
-.dev .contatos #linkedin {
-  background-image: url(imagens/LinkedIn-Logos/In/Digital/White/1x/In-White-40.png);
+.perfil .contatos #linkedin {
+  background-image: url(imagens/logos/LinkedIn-Logos/In/Digital/White/1x/In-White-40.png);
   background-repeat: no-repeat;
   background-size: contain;
   visibility: hidden;
   width: 40px;
   height: 40px;
 }
-.dev .contatos #linkedin:hover {
-  background-image: url(imagens/LinkedIn-Logos/In/Digital/Blue/1x/In-Blue-40.png);
+.perfil .contatos #linkedin:hover {
+  background-image: url(imagens/logos/LinkedIn-Logos/In/Digital/Blue/1x/In-Blue-40.png);
 }
 
-@keyframes dev_contatos {
+@keyframes perfil_contatos {
   0% {
     color: transparent;
     transform: translateX(250px);
@@ -301,4 +306,71 @@
     color: black;
     transform: translateX(0px);
   }
+}
+
+/* Apenas coisas da parte das skils */
+.pag_skill {
+  position: absolute;
+  background-color: transparent;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 625px;
+  animation: ani_skill 2s ease-in-out both;
+  z-index: 8;
+}
+.pag_skill h1 {
+  margin-top: 50px;
+  color: #d5dbff;
+  font-family: skill;
+  font-size: 80px;
+}
+@keyframes ani_skill {
+  0% {
+    transform: translateX(-625px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.img_skill {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.img_skill .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 40px 10px 0 10px;
+  height: 100px;
+  width: 100px;
+  transition: box-shadow 0.2s ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#skill_html {
+  background-image: url(imagens/logos/html/icons8-html-5-100.png);
+}
+#skill_html:hover {
+  background-image: url(imagens/logos/html/icons8-html-5-96.png);
+  filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+}
+#skill_css {
+  background-image: url(imagens/logos/css/icons8-css3-100.png);
+}
+#skill_css:hover {
+  background-image: url(imagens/logos/css/icons8-css3-96.png);
+  filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+}
+#skill_js {
+  background-image: url(imagens/logos/js/icons8-javascript-100.png);
+}
+#skill_js:hover {
+  background-image: url(imagens/logos/js/icons8-javascript-96.png);
+  filter: drop-shadow(0 0 5px rgb(255, 255, 255));
 }

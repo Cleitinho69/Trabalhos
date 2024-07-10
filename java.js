@@ -18,6 +18,46 @@ function pagina() {
   bloco5.style.animation = "side 2s ease-in-out 1s forwards";
   bloco6.style.animation = "side 2s ease-in-out 1s forwards";
 }
+
+// Serve para o meu perfil
+function perfil() {
+  document.querySelector(".perfil").style.display = "flex";
+  var titulo = document.querySelector(".perfil h1");
+  var nome = document.querySelector(".perfil #nome");
+  var foto = document.querySelector(".perfil #foto");
+  var link = document.querySelectorAll(
+    ".perfil .contatos #github, .perfil .contatos #email, .perfil .contatos #linkedin"
+  );
+  titulo.style.visibility = "inherit";
+  titulo.style.color = "#021fc0";
+  titulo.style.transform = "translateX(0)";
+  setTimeout(() => {
+    foto.style.animation = "perfil_foto 1s ease-in-out both";
+
+    setTimeout(() => {
+      nome.style.animation = "perfil_nome 1s ease-in-out both";
+    }, 1000);
+
+    setTimeout(() => {
+      link[0].style.animation = "perfil_contatos 2s ease-in-out both";
+
+      setTimeout(() => {
+        link[1].style.animation = "perfil_contatos 2s ease-in-out both";
+
+        setTimeout(() => {
+          link[2].style.animation = "perfil_contatos 2s ease-in-out both";
+        }, 500);
+      }, 500);
+    }, 500);
+  }, 1000);
+}
+
+// Abertura da parte skill
+function skill() {
+  var pag_skill = document.querySelector(".pag_skill");
+  pag_skill.style.display = "flex";
+  console.log(pag_skill.style.display)
+}
 // Animação do botão no momento em que você clica
 function mouse_enter(id) {
   var botao = document.getElementById(id);
@@ -123,12 +163,18 @@ function botao_click(id) {
     botao[0].style.transition = "1s ease-in-out";
     botao[0].style.left = "950px";
 
-    setTimeout(() => {
-      document.querySelector(".dev").style.display="none";
-    },500)
+    skill();
 
     setTimeout(() => {
-      
+      var perfil = document.querySelector(".perfil");
+      perfil.style.visibility = "hidden";
+      perfil.style.transform = "translateX(1000px)";
+      setTimeout(() => {
+        perfil.style.display = "none";
+      }, 400);
+    }, 200);
+
+    setTimeout(() => {
       texto = document.querySelector("#home #texto");
       botao[0].style.transition = "1.5s ease-in-out";
       botao[0].style.top = "150px";
@@ -149,41 +195,11 @@ function botao_click(id) {
         }, 500);
       }, 1000);
     }, 1000);
-  } else if(id=="home"){
-    document.querySelector(".dev").style.display="none";
+  } else if (id == "home") {
+    document.querySelector(".perfil").style.display = "none";
+  } else if (id == "skill"){
+    
   }
-}
-// Serve para o meu perfil
-function perfil() {
-  document.querySelector(".dev").style.display="flex";
-  var titulo = document.querySelector(".dev h1");
-  var nome = document.querySelector(".dev #nome");
-  var foto = document.querySelector(".dev #foto");
-  var link = document.querySelectorAll(
-    ".dev .contatos #github, .dev .contatos #email, .dev .contatos #linkedin"
-  );
-  titulo.style.visibility = "inherit";
-  titulo.style.color = "#021fc0";
-  titulo.style.transform = "translateX(0)";
-  setTimeout(() => {
-    foto.style.animation = "dev_foto 1s ease-in-out both";
-
-    setTimeout(() => {
-      nome.style.animation = "dev_nome 1s ease-in-out both";
-    }, 1000);
-
-    setTimeout(() => {
-      link[0].style.animation = "dev_contatos 2s ease-in-out both";
-
-      setTimeout(() => {
-        link[1].style.animation = "dev_contatos 2s ease-in-out both";
-
-        setTimeout(() => {
-          link[2].style.animation = "dev_contatos 2s ease-in-out both";
-        }, 500);
-      }, 500);
-    }, 500);
-  }, 1000);
 }
 
 pagina();
