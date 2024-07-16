@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
   text-decoration: none;
 }
 @font-face {
@@ -111,6 +112,9 @@
 
 .botao {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100px;
   width: 350px;
   background-color: rgba(0, 0, 0, 0.103);
@@ -146,6 +150,7 @@
 }
 /* apenas para ter certeza que oq esta escrito no p não vai interferir na animação do botão */
 .botao p {
+  width: fit-content !important;
   z-index: -1;
 }
 
@@ -317,7 +322,6 @@
   flex-direction: column;
   width: 600px;
   height: 625px;
-  animation: ani_skill 2s ease-in-out both;
   z-index: 8;
 }
 .pag_skill h1 {
@@ -326,16 +330,7 @@
   font-family: skill;
   font-size: 80px;
 }
-@keyframes ani_skill {
-  0% {
-    transform: translateX(-625px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+
 .img_skill {
   flex-grow: 1;
   display: flex;
@@ -373,4 +368,83 @@
 #skill_js:hover {
   background-image: url(imagens/logos/js/icons8-javascript-96.png);
   filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+}
+
+
+.sumir_esquerda{
+  animation: sumir_esquerda 1.5s ease-in-out both;
+}
+@keyframes sumir_esquerda {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-625px);
+    opacity: 0;
+    display: none;
+  }
+}
+.sumir_direita{
+  animation: sumir_direita 1.5s ease-in-out both;
+}
+@keyframes sumir_direita{
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(625px);
+    opacity: 0;
+    display: none;
+  }
+}
+.aparecer_direita{
+  animation: aparecer_direita 1.5s ease-in-out both;
+}
+@keyframes aparecer_direita {
+  0% {
+    transform: translateX(625px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.aparecer_esquerda{
+  animation: aparecer_esquerda 1.5s ease-in-out both;
+}
+@keyframes aparecer_esquerda {
+  0% {
+    transform: translateX(-625px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.btn_mover_direita{
+  animation: btn_mover_direita 1.5s ease-in-out both !important;
+}
+@keyframes btn_mover_direita{
+  0% {
+    left: 50px;
+  }
+  100% {
+    left: 950px;
+  }
+}
+.btn_mover_esquerda{
+  animation: btn_mover_esquerda 1.5s ease-in-out both !important;
+}
+@keyframes btn_mover_esquerda{
+  0% {
+    left: 950px;
+  }
+  100% {
+    left: 50px;
+  }
 }
